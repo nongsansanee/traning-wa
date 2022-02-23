@@ -21,8 +21,8 @@ class TreeTableSeeder extends Seeder
         // $table->string('status');  // ready-for-sale , pre-order , wait ,reserve
         // $table->string('remark')->nullable();
         $trees = array(
-            ['name'=>'กุหลาบ','type'=>'flower','price'=>'300','status'=>'ready-for-sale','remark'=>'สูง 30 ซม.'],
-            ['name'=>'ทุเรียน','type'=>'fruit','price'=>'1000','status'=>'reserve'],
+            ['name'=>'กุหลาบ','type'=>'flower','price'=>'300','status'=>'ready-for-sale','remark'=>'สูง 30 ซม.','user_id'=>'1'],
+            ['name'=>'ทุเรียน','type'=>'fruit','price'=>'1000','status'=>'reserve','user_id'=>'1'],
         );
         
         foreach($trees as $tree){

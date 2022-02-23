@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('trees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('type');
+            $table->string('type');  //flower , plant , fruit , leaf
             $table->float('price');
             $table->string('status');  // ready-sale , pre-order , wait ,reserve
             $table->string('remark')->nullable();
+            $table->unsignedSmallInteger('user_id');
             $table->timestamps();
         });
     }
