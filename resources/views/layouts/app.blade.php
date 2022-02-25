@@ -32,15 +32,20 @@
                 </ul>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link active" href="/user-address">ที่อยู่จัดส่ง</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-            logout
+          
             </div>
+          
+            @if(Auth::user() != null)
+              <p>USERNAME:{{Auth::user()->name}}</p>
+           
+            <form class="d-flex" method="post" action="/logout">
+                @csrf
+                <button class="btn btn-primary" type="submit">LOGOUT</button>
+            </form>
+            @endif
         </div>
         </nav>
         @show
