@@ -56,7 +56,9 @@ class UserController extends Controller
         ];
 
         request()->validate($validateRules, $validateMessage);
-        return "OK";
+
+        // store address
+        return "validate OK";
        
     }
   

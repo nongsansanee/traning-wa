@@ -32,7 +32,7 @@
                         <div class="row">
                           <div class="col-md-6 mb-4">
                             <div class="form-outline">
-                              <input type="text" name="firstName" class="form-control form-control-lg" />
+                              <input type="text" name="firstName" class="form-control form-control-lg" value="{{ old('firstName') }}" />
                               <label class="form-label" for="firstName">*First Name</label>
                             </div>
                             @error('firstName')
@@ -43,7 +43,7 @@
                           <div class="col-md-6 mb-4">
           
                             <div class="form-outline">
-                              <input type="text" name="lastName" class="form-control form-control-lg" />
+                              <input type="text" name="lastName" class="form-control form-control-lg" value="{{ old('lastName') }}" />
                               <label class="form-label" for="lastName">*Last Name</label>
                             </div>
                         
@@ -59,7 +59,7 @@
                           <div class="col-md-6 mb-4 pb-2">
           
                             <div class="form-outline">
-                              <input type="email" name="email" class="form-control form-control-lg" />
+                              <input type="email" name="email" class="form-control form-control-lg" value="{{ old('email') }}" />
                               <label class="form-label" for="email">Email</label>
                             </div>
           
@@ -67,7 +67,7 @@
                           <div class="col-md-6 mb-4 pb-2">
           
                             <div class="form-outline">
-                              <input type="number" name="phone" class="form-control form-control-lg" />
+                              <input type="number" name="phone" class="form-control form-control-lg" value="{{ old('phone') }}" />
                               <label class="form-label" for="phone">*Mobile Phone Number</label>
                             </div>
                             @error('phone')
