@@ -89,7 +89,7 @@
                           </div>
           
                         <div class="mt-4 pt-2">
-                          <input class="btn btn-primary btn-lg" type="submit" value="SAVE" />
+                          <input class=" bg-blue-700 p-2 rounded-md text-white " type="submit" value="SAVE" />
                         </div>
           
                       </form>
