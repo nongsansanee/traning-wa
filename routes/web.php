@@ -24,7 +24,7 @@ Route::get('/login', function () {
     return view('login');
 })->name('login');
 
-Route::post('/login', [LoginController::class,'index'] );
+Route::post('/login', [LoginController::class,'authenticate'] );
 Route::post('/logout', [LoginController::class,'logout'] );
 
 Route::get('/index', function () {

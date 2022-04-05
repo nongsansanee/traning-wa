@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-
+use Faker\Factory;
+use App\Contracts\AuthUserAPI;
 class LoginController extends Controller
 {
     /**
@@ -13,16 +14,23 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+
+ 
+    public function authenticate(Request $request,AuthUserAPI $api)
     {
        // return $request->all();
-        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // Authentication was successful...
-           // return "OK";
-            return Redirect::route('trees');
-        }
-       // return "NO OK";
-        return Redirect::route('login');
+      
+       $user = $api->authenticate($request->name, $request->password);
+
+       dd($user);
+        // // return $request->all();
+        // if (Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
+        //     // Authentication was successful...
+        //    // return "OK";
+        //     return Redirect::route('trees');
+        // }
+       
+        // return Redirect::route('login');
     }
     public function logout(Request $request)
     {

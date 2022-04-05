@@ -177,6 +177,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        App\Providers\AuthUserServiceProvider::class,
+
     ],
 
     /*
@@ -194,4 +196,7 @@ return [
         // ...
     ])->toArray(),
 
+    'HAN_API_SERVICE_URL' => env('HAN_API_SERVICE_URL'),
+    'HAN_API_SERVICE_TOKEN' => env('HAN_API_SERVICE_TOKEN'),
+    'HAN_API_SERVICE_SECRET' => env('HAN_API_SERVICE_SECRET'),
 ];
